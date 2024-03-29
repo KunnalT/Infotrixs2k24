@@ -1,0 +1,155 @@
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Website</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <video id="myVideo" autoplay loop muted playsinline preload="auto">
+            <source src="backvid2.mp4" type="video/mp4">
+            <source src="backvid2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <div class="container" >
+        <header>
+            <nav class="menu-container">
+                <!-- burger menu -->
+                <input type="checkbox" aria-label="Toggle menu" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <!-- menu items -->
+                <div class="menu">
+                <ul>
+                </ul>
+                <ul>
+                    <li>
+                    <a href="#home">home</a>
+                    </li>
+                    <li>
+                    <a href="#event"> event</a>
+                    </li>
+                    <li>
+                    <a href="#about">about</a>
+                    </li>
+                    <li>
+                    <a href="#registration">registration</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+            <h1 class="hd1">INFOTRIXS 2K24</h1>
+            <div class="container">
+                <div id="timer" class="timer"></div>
+            </div>
+        </header>
+        <main>
+            <section class="event-section" id="home" >
+                <div class="event-poster">
+                    <img src="poster.jpg" alt="Event Poster">
+                </div>
+                <div class="event-details" id="about">
+                    <h2 class="hd2">ABOUT US</h2>
+                    <p class="p4">Welcome to 's intra-college tech contest! Showcasing innovation and technicalprowess,our contest invites student from all discplines to particioate.From coding challenge to designcompetitions, We offera platform for personal and professional growth.Collaborate with like-minded peers in a supportive environment.Win exciting prizes and grain invaluableexperiences to set yourself apart. Join us and let your creative shine! Stay tuned ffor registration and event updates.Unleash your potential and make your mark in the world of technology at 's Tech Contest!</p>
+                </div>
+            </section>
+            <section class="sub-events-section" id="event">
+                <h2 class="reg">Technical-Events</h2>
+                <ul class="sub-events-list">
+                    <li><a href="#sub-event1" class="lie">CODE CLASH </a></li>
+                    <div id="sub-event1-details" class="sub-event-details">
+                        <p class="p1">"<b>CODE CLASH:</b> Crack the challenge,conquer the code! put your problem-solving skills to the test and unrevel the mysteries of our coding puzzels SOLVE IT AND WIN IT From beginners to experts,all are welcome to tackel the tasks withi a set timeframe.stay tuned for registration details and event updates.Are you up the challenge? join us at code clash and prove your cosing prowess!"<br></p>
+                        <p class="p2"><span class="spann">EVENT COORDINATOR</span><br> Kishore p contact +91 7200995547</p>
+                        <p class="P3">TIME: 10:00 - 11:30<br> VENUE: IT & CSE DEPARTMENT LAB</p>
+                    </div><br>
+                    <li><a href="#sub-event2" class="lie">WEB WEAVE</a></li>
+                    <div id="sub-event2-details" class="sub-event-details">
+                        <p class="p1">"<b>WEB WEAVE:</b> Replicate a templae in 1.5 hours,showcasing design finesse and rapid web development skills.Join the challenge and weave your way to victory! Join us for this fast-paced challenge and unleash your web weaving skills"<br></p>
+                        <p class="p2"><span class="spann">EVENT COORDINATOR</span><br> Jayakumar contact +91 9363583609</p>
+                        <p class="P3">TIME: 11:45 - 12:30<br> VENUE: IT & CSE DEPARTMENT LAB</p>
+                    </div><br>
+                    <li><a href="#sub-event3" class="lie">BUG BATTLE</a></li>
+                    <div id="sub-event3-details" class="sub-event-details">
+                        <p class="p1">"<b>BUG BATTLE:</b> Navigate through code chaos,fix rrors,and emerge victories! Join us for thrilling challenge of debugging expertise.showcase your skills and conqure the bugs. Ready a squash bugs and emerge as the coding champion "<br></p>
+                        <p class="p2"><span class="spann">EVENT COORDINATOR</span><br> Selvasurya s contact +91 9489170528</p>
+                        <p class="P3">TIME: 9:30 - 10:30<br> VENUE: IT 2ND YEAR CLASSROOM</p>
+                    </div><br>
+                    <li><a href="#sub-event4" class="lie">QUIZ QUEST</a></li>
+                    <div id="sub-event4-details" class="sub-event-details">
+                        <p class="p1">"<b>QUIZ QUEST:</b> Dive innto python basics,complete,and conquer the quiz challenge.Test your knoledge,sharpen your skills,and emerge victories. Join us for an educatinal and fun-filled event where python enthusuastscan showcase their expertise and learn nee insights.Ge ready to answer,learn and triump the Quiz Quest! "<br></p>
+                        <p class="p2"><span class="spann">EVENT COORDINATOR</span><br> Chandru k contact +91 7904984258</p>
+                        <p class="P3">TIME: 10:00 - 11:30<br> VENUE: SEMINAR HALL</p>
+                    </div>
+                </ul>
+                </section>
+                <section id="registration">
+                <h2 class="reg">registration</h2>
+                <div class="registration">
+                    <a href="https://forms.gle/XQvozHCzxX7zhCr68" class="lie">CLICK HERE</a> 
+                </div>
+                </section>
+        </main>
+        <footer>
+            <h3>Contact Details</h3>
+            <p>Email:</p>
+            <p>Phone:</p>
+            <p>&copy; 2024 Department . All rights reserved.</p>
+        </footer>
+    </div>
+    </body>
+    </html>
+    <script>
+        document.querySelectorAll('.sub-events-list a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const subEventId = this.getAttribute('href').substring(1);
+            const subEventDetails = document.getElementById(subEventId + '-details');
+            if (subEventDetails.style.display === 'none') {
+                subEventDetails.style.display = 'block';
+            } else {
+                subEventDetails.style.display = 'none';
+            }
+        });
+    });
+    // Set the date and time to count down to
+    var countDownDate = new Date("Mar 31, 2024 00:00:00").getTime();
+    
+    // Update the countdown every second
+    var x = setInterval(function() {
+    
+        // Get the current date and time
+        var now = new Date().getTime();
+        
+        // Calculate the distance between now and the countdown date
+        var distance = countDownDate - now;
+        
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the timer in the "timer" element
+        var timerElement = document.getElementById("timer");
+        if (timerElement) {
+            timerElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        } else {
+            console.error("Timer element not found.");
+            clearInterval(x);
+        }
+    
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            if (timerElement) {
+                timerElement.innerHTML = "EXPIRED";
+            }
+        }
+    }, 1000);
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    </script>
